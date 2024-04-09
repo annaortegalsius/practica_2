@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5vu5y8yd1kbf"]
+
+[ext_resource type="Texture2D" uid="uid://b8tfd06fsjvrb" path="res://Players/128x256/Beige/alienBeige_stand.png" id="1_6gcbe"]
+[ext_resource type="Script" path="res://tscn/personatge.gd" id="1_rjo5b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fswu7"]
+size = Vector2(111, 150)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_rjo5b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_fswu7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(1, 0.984375)
+texture = ExtResource("1_6gcbe")
+region_enabled = true
+region_rect = Rect2(0, 102, 128, 154)
